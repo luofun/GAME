@@ -10,3 +10,8 @@ shooting
 
 
 ![image](https://github.com/luofun/GAME/blob/master/shooting/shooting.gif)
+
+checkers(more than 2000 lines code)
+
+
+![image](https://github.com/luofun/GAME/blob/master/infinitychecker/checkers.gif)
