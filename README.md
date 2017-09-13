@@ -15,3 +15,8 @@ checkers(more than 2000 lines code)
 
 
 ![image](https://github.com/luofun/GAME/blob/master/infinitychecker/checkers.gif)
+
+jump
+
+
+![image](https://github.com/luofun/GAME/blob/master/jump/jump.gif)
