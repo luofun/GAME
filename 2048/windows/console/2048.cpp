@@ -1,10 +1,9 @@
 #include<stdio.h>
 #include<time.h>
 #include<stdlib.h>
-//#include<winsock.h>
 #include<winsock2.h>
-# include <Windows.h>  
-# include <conio.h> 
+#include<Windows.h>  
+#include<conio.h> 
 
 int testrand(int seed);
 int randnum(int msize);
@@ -22,57 +21,8 @@ int S = 0;
 
 int main(int arcy, char* arcv)
 {
-	//int x;
-	//int count[16];
-	//char a;
-	//int sign;
 	int** matrix = NULL;
-
-	//for (int i = 0; i < 16; i++)
-		//count[i] = 0;
 	srand(time(NULL));
-	//timeval tv;
-	//gettimeofday(&tv, NULL);//linux code
-	//srand(tv.tv_sec + tv.tv_usec);
-	//printf("clock=%d\n", time(NULL));
-	//x = rand();
-	//printf("randmax=%d\n", RAND_MAX);
-	//printf("x=%d\n", x);
-	/*for (int i = 0; i <= 200; i++)
-	{
-		x = rand();
-		//printf("x=%d\n", x);
-		//printf("testrand=%d\n", testrand(x));
-		//printf("randnum=%d\n", x=randnum(4));
-		//printf("testX=%d\n", x);
-		//count[x]++;
-
-	}*/
-	/*for (int i = 0; i < 16; i++)
-		printf("count[%d]=%d\t", i+1, count[i]);*/
-
-	//Sleep(1000);
-	//system("cls");
-
-	/*while (1)
-	{
-		if (kbhit())
-		{
-			a = getch();
-			if (a == 27)
-				break;
-			printf("ch=%d\n", a);//esc to get out
-		}
-	}
-	Sleep(1000);
-	system("cls");
-	*/
-	/*coord.X = 1;
-	coord.Y = 1;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("%d", 2048);
-	putch('\n');*/
-	//initscreen();
 	putch('\n');
 	printf(" ____   ___  _  _    ___  \n");
 	printf("|___ \\ / _ \\| || |  ( _ ) \n");
@@ -83,37 +33,6 @@ int main(int arcy, char* arcv)
 	Sleep(2000);
 	system("cls");
 
-	/*initscreen();
-	coord.X = 2;
-	coord.Y = 0;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("0000");
-	coord.X += 6;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("0000");
-	coord.X += 6;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("0000");
-	coord.X += 6;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("0000");
-	coord.Y += 2;
-	coord.X = 2;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("0000");
-	coord.X += 6;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("0000");
-	coord.X += 6;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("0000");
-	coord.X += 6;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-	printf("0000");
-
-	Sleep(1000);
-	system("cls");
-	*/
 	matrix = init(4);
 	for (int i = 0; i < 4; i++)
 		for (int j = 0; j < 4; j++)
@@ -121,10 +40,6 @@ int main(int arcy, char* arcv)
 	Sleep(1000);
 	system("cls");
 
-
-	/*matrix[1][1] = 2;
-	matrix[2][3] = 4;
-	matrix[0][1] = 2;*/
 	putrand(matrix);
 	putrand(matrix);
 	initscreen();
@@ -141,8 +56,7 @@ int main(int arcy, char* arcv)
 				break;
 			show(matrix);
 		}
-		//coord.X = 0;
-		//coord.Y = 0;
+		
 	}
 	
 
@@ -178,10 +92,6 @@ int randnum(int msize)
 int testrand(int seed)
 {
 	int num;
-	//srand(seed);
-	//num = (seed *16807L) % ((1 << 31) - 1);
-	//num = num + time(NULL);
-	//num = (num * 16807L) % ((1 << 31) - 1);
 	num = (seed * 16807L) % (16);
 	return num;
 }
@@ -205,7 +115,6 @@ void logic(int** matrix, int sign)
 			index = -1;
 			for (int i = 0; i < 4; i++)
 			{
-				//matrix[i][j]
 				if (matrix[i][j] == 0)
 					continue;
 				else
@@ -244,7 +153,6 @@ void logic(int** matrix, int sign)
 			index = -1;
 			for (int i = 0; i < 4; i++)
 			{
-				//matrix[i][j]
 				if (matrix[3 - i][j] == 0)
 					continue;
 				else
@@ -283,7 +191,6 @@ void logic(int** matrix, int sign)
 			index = -1;
 			for (int j = 0; j < 4; j++)
 			{
-				//matrix[i][j]
 				if (matrix[i][j] == 0)
 					continue;
 				else
@@ -322,7 +229,6 @@ void logic(int** matrix, int sign)
 			index = -1;
 			for (int j = 0; j < 4; j++)
 			{
-				//matrix[i][j]
 				if (matrix[i][3 - j] == 0)
 					continue;
 				else
