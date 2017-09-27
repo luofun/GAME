@@ -34,13 +34,6 @@ int main(int arcy, char* arcv)
 	initM();
 	dataE(10, 30);
 
-	//getS();
-
-	/*printf("1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950");
-	printf("\n");
-	putch('a');
-	putch('a');
-	putch('a');*/
 	ship();
 	show();
 
