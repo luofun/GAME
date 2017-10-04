@@ -1,5 +1,5 @@
 # GAME
-yeah! my design, my game.
+~~yeah! my design, my game.~~
 ----------
 2048
 
